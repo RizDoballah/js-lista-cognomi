@@ -1,8 +1,8 @@
 var cognomeUser = prompt('inserisci il tuo cognome');
 console.log(cognomeUser);
 var cognomi = ['merceds', 'renault', 'kia', 'rangerover', 'fiat'];
-cognomi.sort();
-console.log(cognomi);
+// cognomi.sort();
+// console.log(cognomi);
 cognomi.push(cognomeUser);
 console.log(cognomi);
 cognomi.sort();
@@ -10,7 +10,9 @@ for (var i = 0; i < cognomi.length; i++) {
   document.getElementById("lista").innerHTML += '<li>' + cognomi[i] +
   '</li>' ;
 }
-document.getElementById("posizione").innerHTML = 'Il tuo cognome si trova al primi posto.'
+console.log(cognomi.indexOf(cognomeUser));
+var posizione = cognomi.indexOf(cognomeUser);
+document.getElementById("posizione").innerHTML = 'il tuo cognome si trova alla posizione : ' + posizione;
 
 
 
