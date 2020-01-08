@@ -3,7 +3,14 @@ console.log(cognomeUser);
 var cognomi = ['merceds', 'renault', 'kia', 'rangerover', 'fiat'];
 cognomi.sort();
 console.log(cognomi);
-document.getElementById("lista").innerHTML = cognomi;
+cognomi.push(cognomeUser);
+console.log(cognomi);
+cognomi.sort();
+for (var i = 0; i < cognomi.length; i++) {
+  document.getElementById("lista").innerHTML += '<li>' + cognomi[i] +
+  '</li>' ;
+}
+document.getElementById("posizione").innerHTML = 'Il tuo cognome si trova al primi posto.'
 
 
 
